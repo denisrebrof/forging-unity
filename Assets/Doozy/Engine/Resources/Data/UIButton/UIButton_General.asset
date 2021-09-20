@@ -16,11 +16,10 @@ MonoBehaviour:
   DatabaseType: 0
   Names:
   - Back
-  - Unnamed
+  - Game_OpenLevelsList
   - Game_OpenSettings
   - MysteryObject_ForgeIt
   - MysteryObject_Later
   - MysteryObject_NextLevel
   - Settings_Close
-  - Settings_OpenMysteryObjects
-  - 
+  - Unnamed
