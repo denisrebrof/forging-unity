@@ -1,30 +1,37 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DefaultPager : MonoBehaviour, IPager
+namespace Pager
 {
-    [SerializeField] private GameObject pagePrefab;
-
-    public RectTransform CreatePage()
+    public class DefaultPager : MonoBehaviour, IPager
     {
-        var page = Instantiate(pagePrefab);
-        page.AddComponent<PageView>().state = "created";
-        return page.GetComponent<RectTransform>();
-    }
+        [SerializeField] private GameObject pagePrefab;
 
-    public void OnBind(GameObject page, int pageNumber)
-    {
-        var pageView = page.GetComponent<PageView>();
-        pageView.state = "bound";
-        pageView.pageNumber = pageNumber;
-    }
+        public RectTransform CreatePage()
+        {
+            var page = Instantiate(pagePrefab);
+            page.AddComponent<PageView>().state = "created";
+            page.GetComponentInChildren<Text>().text = "C";
+            return page.GetComponent<RectTransform>();
+        }
 
-    public void OnRecycle(GameObject page)
-    {
-        page.GetComponent<PageView>().state = "recycled";
-    }
+        public void OnBind(GameObject page, int pageNumber)
+        {
+            var pageView = page.GetComponent<PageView>();
+            pageView.state = "bound";
+            page.GetComponentInChildren<Text>().text = pageNumber.ToString();
+            pageView.pageNumber = pageNumber;
+        }
 
-    public int GetPagesCount()
-    {
-        return 5;
+        public void OnRecycle(GameObject page)
+        {
+            page.GetComponent<PageView>().state = "recycled";
+            page.GetComponentInChildren<Text>().text = "R";
+        }
+
+        public int GetPagesCount()
+        {
+            return 5;
+        }
     }
 }
