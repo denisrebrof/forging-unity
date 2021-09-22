@@ -26148,6 +26148,7 @@ GameObject:
   - component: {fileID: 1990262233}
   - component: {fileID: 1990262236}
   - component: {fileID: 1990262235}
+  - component: {fileID: 1990262237}
   - component: {fileID: 1990262234}
   m_Layer: 5
   m_Name: Panel
@@ -26155,7 +26156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1990262233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26184,12 +26185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990262232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f38b1a0f7b1f36a4fb27ad789e871ed4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbf8e031bdd6f045a560b559f288d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentThreshold: 0.2
-  easing: 0.5
-  totalPages: 2
+  pagePrefab: {fileID: 8321751359009165644, guid: 548c3336f2d0e4c4ab4c0c69427d1023,
+    type: 3}
 --- !u!114 &1990262235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26228,6 +26228,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990262232}
   m_CullTransparentMesh: 1
+--- !u!114 &1990262237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990262232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2fb1462bb01d849960085fd6b30e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DragPosition: 0
+  currentPage: 0
+  defaultPoolSize: 3
+  dragMargin: 100
+  easing: 0.5
 --- !u!1 &2100798983
 GameObject:
   m_ObjectHideFlags: 0

@@ -285,6 +285,7 @@ MonoBehaviour:
   currentPage: 0
   defaultPoolSize: 3
   dragMargin: 200
+  easing: 0.5
 --- !u!114 &1019544052
 MonoBehaviour:
   m_ObjectHideFlags: 0

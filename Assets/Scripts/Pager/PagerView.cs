@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.EventSystems;
 namespace Pager
 {
     [RequireComponent(typeof(RectTransform))]
-    public class PagerView : MonoBehaviour, IDragHandler
+    public class PagerView : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         private Rect pagerRect;
         private IPager pager;
@@ -17,8 +18,10 @@ namespace Pager
         [SerializeField] private float DragPosition = 0f;
         [SerializeField] private int currentPage = 0;
 
-        [Header("Params")] public int defaultPoolSize = 3;
+        [Header("Params")] 
+        public int defaultPoolSize = 3;
         public float dragMargin = 0f;
+        public float easing = 0f;
 
         private void Start()
         {
@@ -43,9 +46,34 @@ namespace Pager
 
         public void OnDrag(PointerEventData data)
         {
+            StopAllCoroutines();
             float difference = data.delta.x;
             DragPosition += difference;
             RecalculatePagePositions();
+        }
+
+        public void OnEndDrag(PointerEventData data)
+        {
+            StartCoroutine(SmoothRevertDrag());
+        }
+
+        IEnumerator SmoothRevertDrag()
+        {
+            var initialDragPosition = DragPosition;
+            float targetDragPosition = 0;
+            if (DragPosition > pagerRect.width / 2)
+                targetDragPosition = pagerRect.width;
+            else if (DragPosition < -pagerRect.width / 2)
+                targetDragPosition = -pagerRect.width;
+            float timer = 0f;
+            while (timer <= 1.0)
+            {
+                timer += Time.deltaTime / easing;
+                var progress = Mathf.SmoothStep(0f, 1f, timer);
+                DragPosition = Mathf.Lerp(initialDragPosition, targetDragPosition, timer);
+                RecalculatePagePositions();
+                yield return null;
+            }
         }
 
         private void RecalculatePagePositions()
@@ -53,7 +81,7 @@ namespace Pager
             var selectedPagePosition = currentPage + (int)(-DragPosition / pagerRect.width);
             currentPage = Mathf.Clamp(selectedPagePosition, 0, pager.GetPagesCount() - 1);
 
-            DragPosition = DragPosition % pagerRect.width;
+            DragPosition %= pagerRect.width;
 
             if (selectedPagePosition <= 0)
                 DragPosition = Mathf.Min(DragPosition, dragMargin);
