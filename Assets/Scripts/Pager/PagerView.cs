@@ -30,10 +30,10 @@ public class PagerView : MonoBehaviour, IDragHandler
 
     private int[] GetVisiblePages()
     {
-        if (DragPosition > 0)
+        if (DragPosition < 0)
             return new[] { currentPage, currentPage + 1 };
 
-        if (DragPosition < 0)
+        if (DragPosition > 0)
             return new[] { currentPage - 1, currentPage };
 
         return new[] { currentPage };
@@ -41,14 +41,14 @@ public class PagerView : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData data)
     {
-        float difference = data.pressPosition.x - data.position.x;
+        float difference = data.delta.x;
         DragPosition += difference;
-        
-        currentPage += (int)(DragPosition / _rectTransform.rect.width);
+
+        currentPage += (int)(-DragPosition / _rectTransform.rect.width);
         DragPosition = DragPosition % _rectTransform.rect.width;
 
         var visiblePages = GetVisiblePages()
-            .Where(pageNumber => pageNumber > 0)
+            .Where(pageNumber => pageNumber >= 0)
             .Where(pageNumber => pageNumber < pager.GetPagesCount());
 
         pages
@@ -58,7 +58,7 @@ public class PagerView : MonoBehaviour, IDragHandler
 
         foreach (var pageNumber in visiblePages)
         {
-            var pagePosition = pageNumber * _rectTransform.rect.width + DragPosition;
+            var pagePosition = (pageNumber - currentPage) * _rectTransform.rect.width + DragPosition;
             GetPage(pageNumber).anchoredPosition = new Vector2(pagePosition, 0);
         }
     }
@@ -82,7 +82,8 @@ public class PagerView : MonoBehaviour, IDragHandler
         var newPage = pagesPool.Count > 0 ? pagesPool.Pop() : CreatePage();
         newPage.transform.SetParent(transform);
         newPage.gameObject.SetActive(true);
-        pager.OnBind(newPage.gameObject);
+        pages[pageNumber] = newPage;
+        pager.OnBind(newPage.gameObject, pageNumber);
         return newPage;
     }
 
@@ -91,6 +92,7 @@ public class PagerView : MonoBehaviour, IDragHandler
         var page = pager.CreatePage();
         page.parent = transform;
         page.anchoredPosition = Vector2.zero;
+        page.sizeDelta = Vector2.zero;
         page.gameObject.SetActive(false);
         return page;
     }
