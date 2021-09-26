@@ -1,14 +1,14 @@
 ﻿using Doozy.Engine;
-using LevelLoading;
+using LevelManagement;
 using UnityEngine;
 using Zenject;
 
-namespace LevelManagement
+namespace LevelManager
 {
     public class LevelManager : MonoBehaviour
     {
         [Inject]
-        private LevelLoader levelLoader;
+        private GameLevels.Presentation.LevelLoader levelLoader;
         [Inject]
         private LevelManagementSettings levelSettings;
 

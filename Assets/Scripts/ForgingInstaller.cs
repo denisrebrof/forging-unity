@@ -14,8 +14,8 @@ public class ForgingInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        var levelManager = FindObjectOfType<LevelManager>();
-        Container.BindInterfacesAndSelfTo<LevelManager>().FromInstance(levelManager);
+        var levelManager = FindObjectOfType<LevelManager.LevelManager>();
+        Container.BindInterfacesAndSelfTo<LevelManager.LevelManager>().FromInstance(levelManager);
 
         var levelManagementSettings = Resources.LoadAll<LevelManagementSettings>(String.Empty).FirstOrDefault();
         Container.Bind<LevelManagementSettings>().FromInstance(levelManagementSettings);
@@ -23,8 +23,8 @@ public class ForgingInstaller : MonoInstaller
         var levelLoadingAnimation = FindObjectOfType<CameraRotateLevelLoadingAnimation>();
         Container.BindInterfacesAndSelfTo<CameraRotateLevelLoadingAnimation>().FromInstance(levelLoadingAnimation).AsSingle();
 
-        var levelLoader = FindObjectOfType<LevelLoader>();
-        Container.Bind<LevelLoader>().FromInstance(levelLoader);
+        var levelLoader = FindObjectOfType<GameLevels.Presentation.LevelLoader>();
+        Container.Bind<GameLevels.Presentation.LevelLoader>().FromInstance(levelLoader);
 
         var hMapController = FindObjectOfType<HeatingMapController>();
         Container.Bind<HeatingMapController>().FromInstance(hMapController);
