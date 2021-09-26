@@ -1,23 +1,23 @@
-﻿using UnityEngine;
+﻿using GameLevels.Domain;
+using LevelLoading;
+using UnityEngine;
 using Zenject;
 
-namespace LevelLoading
+namespace GameLevels.Presentation
 {
     public class LevelLoader : MonoBehaviour
     {
-        [SerializeField]
-        private Transform levelHolder;
-        [Inject]
-        private ILevelLoadingTransition levelSwitchAnimator;
+        [SerializeField] private Transform levelHolder;
+        [Inject] private ILevelLoadingTransition levelSwitchAnimator;
         private GameLevel levelToLoad = null;
         private bool isLevelSwitching = false;
 
         private void Start()
         {
-            if(levelHolder==null)
+            if (levelHolder == null)
             {
                 var foundedLevelHolder = GameObject.FindWithTag("LevelHolder");
-                if(foundedLevelHolder!=null)
+                if (foundedLevelHolder != null)
                     levelHolder = foundedLevelHolder.transform;
             }
         }
@@ -25,31 +25,26 @@ namespace LevelLoading
         public void LoadLevel(GameLevel level)
         {
             levelToLoad = level;
-            if(!isLevelSwitching)
-            {
-                isLevelSwitching = true;
-                levelSwitchAnimator.StartAnimation(
-                    delegate
-                    {
-                        SpawnLevel();
-                    },
-                    delegate
-                    {
-                        TryLoadLevel();
-                    });
-            }
+            if (isLevelSwitching)
+                return;
+
+            isLevelSwitching = true;
+            levelSwitchAnimator.StartAnimation(
+                () => SpawnLevel(),
+                () => TryLoadLevel()
+            );
         }
 
         private void TryLoadLevel()
         {
             isLevelSwitching = false;
-            if(levelToLoad!=null)
+            if (levelToLoad != null)
                 LoadLevel(levelToLoad);
         }
 
         private void SpawnLevel()
         {
-            while(levelHolder.childCount>0)
+            while (levelHolder.childCount > 0)
                 DestroyImmediate(levelHolder.GetChild(0).gameObject);
             Instantiate(levelToLoad.levelObject, levelHolder.position, levelHolder.rotation, levelHolder);
             levelToLoad = null;

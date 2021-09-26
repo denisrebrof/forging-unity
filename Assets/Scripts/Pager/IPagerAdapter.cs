@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Pager
 {
-    public interface IPager
+    public interface IPagerAdapter
     {
         RectTransform CreatePage();
         void OnBind(GameObject page, int pageNumber);

@@ -9,8 +9,14 @@ namespace Pager
     [RequireComponent(typeof(RectTransform))]
     public class PagerView : MonoBehaviour, IDragHandler, IEndDragHandler
     {
+        [Header("Params")] 
+        public int defaultPoolSize = 3;
+        public float dragMargin = 0f;
+        public float dragMultiplier = 1f;
+        public float easing = 0f;
+        
         private Rect pagerRect;
-        private IPager pager;
+        private IPagerAdapter _pagerAdapter;
 
         private readonly Stack<RectTransform> pagesPool = new Stack<RectTransform>();
         private readonly Dictionary<int, RectTransform> pages = new Dictionary<int, RectTransform>();
@@ -18,14 +24,9 @@ namespace Pager
         [SerializeField] private float DragPosition = 0f;
         [SerializeField] private int currentPage = 0;
 
-        [Header("Params")] 
-        public int defaultPoolSize = 3;
-        public float dragMargin = 0f;
-        public float easing = 0f;
-
         private void Start()
         {
-            pager = GetComponent<IPager>();
+            _pagerAdapter = GetComponent<IPagerAdapter>();
             pagerRect = GetComponent<RectTransform>().rect;
             for (var i = 0; i < defaultPoolSize; i++)
             {
@@ -41,14 +42,14 @@ namespace Pager
             else if (DragPosition > 0) pagePositions = new[] { currentPage - 1, currentPage };
             return pagePositions
                 .Where(pageNumber => pageNumber >= 0)
-                .Where(pageNumber => pageNumber < pager.GetPagesCount());
+                .Where(pageNumber => pageNumber < _pagerAdapter.GetPagesCount());
         }
 
         public void OnDrag(PointerEventData data)
         {
             StopAllCoroutines();
-            float difference = data.delta.x;
-            DragPosition += difference;
+            var difference = data.delta.x;
+            DragPosition += difference * dragMultiplier;
             RecalculatePagePositions();
         }
 
@@ -79,13 +80,13 @@ namespace Pager
         private void RecalculatePagePositions()
         {
             var selectedPagePosition = currentPage + (int)(-DragPosition / pagerRect.width);
-            currentPage = Mathf.Clamp(selectedPagePosition, 0, pager.GetPagesCount() - 1);
+            currentPage = Mathf.Clamp(selectedPagePosition, 0, _pagerAdapter.GetPagesCount() - 1);
 
             DragPosition %= pagerRect.width;
 
             if (selectedPagePosition <= 0)
                 DragPosition = Mathf.Min(DragPosition, dragMargin);
-            else if (selectedPagePosition >= pager.GetPagesCount() - 1)
+            else if (selectedPagePosition >= _pagerAdapter.GetPagesCount() - 1)
                 DragPosition = Mathf.Max(DragPosition, -dragMargin);
 
             var visiblePages = GetVisiblePages();
@@ -106,7 +107,7 @@ namespace Pager
         private void RemovePage(int pageNumber)
         {
             if (!pages.TryGetValue(pageNumber, out var page)) return;
-            pager.OnRecycle(page.gameObject);
+            _pagerAdapter.OnRecycle(page.gameObject);
             pagesPool.Push(page);
             pages.Remove(pageNumber);
             page.gameObject.SetActive(false);
@@ -121,13 +122,13 @@ namespace Pager
             newPage.transform.SetParent(transform);
             newPage.gameObject.SetActive(true);
             pages[pageNumber] = newPage;
-            pager.OnBind(newPage.gameObject, pageNumber);
+            _pagerAdapter.OnBind(newPage.gameObject, pageNumber);
             return newPage;
         }
 
         private RectTransform CreatePage()
         {
-            var page = pager.CreatePage();
+            var page = _pagerAdapter.CreatePage();
             page.SetParent(transform);
             page.anchoredPosition = Vector2.zero;
             page.sizeDelta = Vector2.zero;

@@ -1,17 +1,24 @@
-﻿namespace GameLevels.Domain
+﻿using System.Collections.Generic;
+using ForgingDomain;
+
+namespace GameLevels.Domain
 {
-    public class LevelsUseCases
+    public class GameLevelsUseCases
     {
-        private ILevelsRepository _levelsRepository;
+        private IGameLevelsRepository _levelsRepository;
         private IBalanceRepository _balanceRepository;
 
-        GameLevel GetLevel(int id)
+        public GameLevel GetLevel(int id) => _levelsRepository.GetLevel(id);
+
+        public List<GameLevel> GetLevelsPaged(int page, int pageSize) =>
+            _levelsRepository.GetLevelsPaged(page, pageSize);
+
+        public void CompleteLevel(int id)
         {
-            return _levelsRepository.GetLevel(id);
+            var level = _levelsRepository.GetLevel(id);
+            if(!level.completed)
+                _balanceRepository.AddBalance(level.coinsReward);
+            _levelsRepository.CompleteLevel(id);
         }
-        
-        
-        
-        
     }
 }
