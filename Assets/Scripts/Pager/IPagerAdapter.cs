@@ -4,9 +4,9 @@ namespace Pager
 {
     public interface IPagerAdapter
     {
-        RectTransform CreatePage();
-        void OnBind(GameObject page, int pageNumber);
-        void OnRecycle(GameObject page);
+        IPageViewHolder CreatePage();
+        void OnBind(IPageViewHolder page, int pageNumber);
+        void OnRecycle(IPageViewHolder page);
         int GetPagesCount();
     }
 }

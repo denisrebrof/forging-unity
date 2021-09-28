@@ -1,41 +1,26 @@
 using LevelLoader.Data;
+using Pager;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Pager
+namespace GameLevels.Presentation
 {
-    public class LevelsListPagerAdapter : MonoBehaviour, IPagerAdapter
+    public class LevelsListPagerAdapter : DefaultPagerAdapter<DefaultPageViewHolder>
     {
         //TODO: provide via di by IGameLevelsRepository
         [FormerlySerializedAs("repository")] [SerializeField]
         private GameLevelsHardcodedRepository hardcodedRepository;
-        
-        [SerializeField] private GameObject pagePrefab;
+
         [SerializeField] private GameObject levelPrefab;
 
         [SerializeField] private int levelsOnPage = 16;
 
-        public RectTransform CreatePage()
+        public override int GetPagesCount()
         {
-            var page = Instantiate(pagePrefab);
-            for (var i = 0; i < levelsOnPage; i++)
-                Instantiate(levelPrefab, pagePrefab.transform);
-            return page.GetComponent<RectTransform>();
-        }
-
-        public void OnBind(GameObject page, int pageNumber)
-        {
-            
-        }
-
-        public void OnRecycle(GameObject page)
-        {
-            
-        }
-
-        public int GetPagesCount()
-        {
-            return 5;
+            var pagesCount = hardcodedRepository.GetLevelsCount() / levelsOnPage;
+            if (hardcodedRepository.GetLevelsCount() % levelsOnPage != 0)
+                pagesCount += 1;
+            return pagesCount;
         }
     }
 }
