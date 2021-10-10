@@ -20,10 +20,8 @@ public class WheelOfFortuneController : MonoBehaviour
     private Vector3 targetRotation;
     private int targetTurns;
     private int randomResult;
-    private float time;
     
     private Tweener rotationTweener = null;
-    private Tweener punchTweener = null;
     
     private void Awake()
     {
@@ -41,7 +39,6 @@ public class WheelOfFortuneController : MonoBehaviour
     {
         PlayButton.interactable = false;
 
-        time = 0f;
         Wheel.rotation = Quaternion.identity;
         
         randomResult = Random.Range(0, 8);
@@ -54,6 +51,7 @@ public class WheelOfFortuneController : MonoBehaviour
             rotationTweener = Wheel.DORotate(new Vector3(0f, 0f, Wheel.rotation.eulerAngles.z - 15f), 2f, RotateMode.FastBeyond360);
             rotationTweener.onComplete += () =>
             {
+                OnIndexDropped?.Invoke(randomResult);
                 PlayButton.interactable = true;
                 rotationTweener = null;
             };
@@ -64,7 +62,5 @@ public class WheelOfFortuneController : MonoBehaviour
     {
         rotationTweener?.Kill();
         rotationTweener = null;
-        punchTweener?.Kill();
-        punchTweener = null;
     }
 }
