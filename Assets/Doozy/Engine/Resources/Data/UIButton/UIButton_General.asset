@@ -23,4 +23,6 @@ MonoBehaviour:
   - MysteryObject_NextLevel
   - Settings_Close
   - Settings_OpenMysteryObjects
-  - 
+  - WheelOfFortune_Open
+  - WheelOfFortune_Close
+  - WheelOfFortune_Play
