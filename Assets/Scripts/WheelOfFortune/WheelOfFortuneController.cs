@@ -46,26 +46,16 @@ public class WheelOfFortuneController : MonoBehaviour
         
         randomResult = Random.Range(0, 8);
         targetTurns = Random.Range(TurnRandomRange.x, TurnRandomRange.y);
-        targetRotation = new Vector3(0f, 0f, targetTurns * 360f + randomResult * 45f + Random.Range(-20f, 20f));
+        targetRotation = new Vector3(0f, 0f, targetTurns * 360f + randomResult * 45f + Random.Range(-20f, 20f) + 15f);
         
         rotationTweener = Wheel.DORotate(targetRotation, Duration, RotateMode.FastBeyond360);
-        rotationTweener.onUpdate += () =>
+        rotationTweener.onComplete += () =>
         {
-            if (!(time < Duration - 0.5f)) 
-                return;
-            
-            time += Time.deltaTime;
-
-            if (!(time >= Duration - 0.5f)) 
-                return;
-            
-            punchTweener = Wheel.DOPunchRotation(Vector3.forward * 20f * (1 - 1 / targetTurns) , 2f, 1);
-            punchTweener.onComplete += () =>
+            rotationTweener = Wheel.DORotate(new Vector3(0f, 0f, Wheel.rotation.eulerAngles.z - 15f), 2f, RotateMode.FastBeyond360);
+            rotationTweener.onComplete += () =>
             {
                 PlayButton.interactable = true;
-                OnIndexDropped?.Invoke(randomResult);
                 rotationTweener = null;
-                punchTweener = null;
             };
         };
     }
