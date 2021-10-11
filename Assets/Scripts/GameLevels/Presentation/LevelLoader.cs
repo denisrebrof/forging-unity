@@ -14,12 +14,10 @@ namespace GameLevels.Presentation
 
         private void Start()
         {
-            if (levelHolder == null)
-            {
-                var foundedLevelHolder = GameObject.FindWithTag("LevelHolder");
-                if (foundedLevelHolder != null)
-                    levelHolder = foundedLevelHolder.transform;
-            }
+            if (levelHolder != null) return;
+            var foundedLevelHolder = GameObject.FindWithTag("LevelHolder");
+            if (foundedLevelHolder != null)
+                levelHolder = foundedLevelHolder.transform;
         }
 
         public void LoadLevel(GameLevel level)
@@ -30,8 +28,8 @@ namespace GameLevels.Presentation
 
             isLevelSwitching = true;
             levelSwitchAnimator.StartAnimation(
-                () => SpawnLevel(),
-                () => TryLoadLevel()
+                SpawnLevel,
+                TryLoadLevel
             );
         }
 
@@ -46,6 +44,7 @@ namespace GameLevels.Presentation
         {
             while (levelHolder.childCount > 0)
                 DestroyImmediate(levelHolder.GetChild(0).gameObject);
+            Debug.Log(levelToLoad.levelObjectUri);
             var levelObject = Resources.Load(levelToLoad.levelObjectUri) as GameObject;
             Instantiate(levelObject, levelHolder.position, levelHolder.rotation, levelHolder);
             levelToLoad = null;

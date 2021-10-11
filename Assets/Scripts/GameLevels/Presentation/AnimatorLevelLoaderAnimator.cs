@@ -12,9 +12,9 @@ namespace LevelLoading
 
         private void Start() => cameraAnimator = GetComponent<Animator>();
 
-        public void StartAnimation(Action onSceneHided = null, Action onCompleted = null)
+        public void StartAnimation(Action onSceneHidden = null, Action onCompleted = null)
         {
-            this.onSceneHided = onSceneHided;
+            this.onSceneHided = onSceneHidden;
             this.onCompleted = onCompleted;
             cameraAnimator.SetTrigger("SwitchLevel");
         }

@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: LevelManagementSettings
   m_EditorClassIdentifier: 
   smashingLevels:
-  - levelObject: {fileID: 7210775821928611842, guid: 529877e6b1319d749937e84fea5fb30f,
-      type: 3}
+  - id: 0
+    coinsReward: 20
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
