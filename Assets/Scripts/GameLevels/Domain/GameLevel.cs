@@ -6,6 +6,7 @@ namespace GameLevels.Domain
     public class GameLevel
     {
         public long id;
+        public int number;
         public int coinsReward;
         public bool completed;
         public string imageUri;

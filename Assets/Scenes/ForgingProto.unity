@@ -433,60 +433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be3e3de5b2a478a88b66eb4d761829e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &154864994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 154864996}
-  - component: {fileID: 154864995}
-  m_Layer: 0
-  m_Name: levelsRepository
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &154864995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154864994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb327e7d5364f6d45a9c8b3ca44105b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levels:
-  - id: 0
-    coinsReward: 10
-    completed: 0
-    imageUri: 
-    levelObjectUri: 
-  - id: 1
-    coinsReward: 20
-    completed: 0
-    imageUri: 
-    levelObjectUri: 
---- !u!4 &154864996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154864994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 764774675}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172646451
 GameObject:
   m_ObjectHideFlags: 0
@@ -16129,7 +16075,6 @@ Transform:
   - {fileID: 871357862}
   - {fileID: 1168203753}
   - {fileID: 1440177232}
-  - {fileID: 154864996}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26245,10 +26190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pagePrefab: {fileID: 1913130672430160597, guid: 52977ad2981d47847a3dff36047600a3,
     type: 3}
-  hardcodedRepository: {fileID: 154864995}
-  levelPrefab: {fileID: 3619841979895099462, guid: 11d02740867256242a38ccf894438d03,
+  levelPrefab: {fileID: 5623614120406041045, guid: 11d02740867256242a38ccf894438d03,
     type: 3}
-  levelsOnPage: 1
+  levelsOnPage: 9
 --- !u!114 &1990262235
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using GameLevels.Domain;
 using UnityEngine;
 
-namespace LevelLoader.Data
+namespace GameLevels.Data
 {
-    public class GameLevelsHardcodedRepository : MonoBehaviour, IGameLevelsRepository
+    [CreateAssetMenu(fileName = "GameLevelsHardcodedRepository")]
+    public class GameLevelsHardcodedRepository : ScriptableObject, IGameLevelsRepository
     {
         [SerializeField] private List<GameLevel> levels;
         
@@ -15,7 +16,12 @@ namespace LevelLoader.Data
 
         public List<GameLevel> GetLevelsPaged(int page, int pageSize)
         {
-            return levels.GetRange(page * pageSize, pageSize);
+            var startIndex = page * pageSize;
+            if (startIndex >= levels.Count)
+                return new List<GameLevel>();
+
+            var size = Mathf.Min(levels.Count - startIndex, pageSize);
+            return levels.GetRange(startIndex, size);
         }
 
         public int GetLevelsCount()

@@ -32,6 +32,7 @@ namespace Pager
                 var page = CreatePage();
                 _pagesPool.Push(page);
             }
+            RecalculatePagePositions();
         }
 
         private IEnumerable<int> GetVisiblePages()

@@ -2,6 +2,8 @@
 using LevelManagement;
 using System;
 using System.Linq;
+using GameLevels.Data;
+using GameLevels.Domain;
 using UnityEngine;
 using Zenject;
 
@@ -19,6 +21,12 @@ public class ForgingInstaller : MonoInstaller
 
         var levelManagementSettings = Resources.LoadAll<LevelManagementSettings>(String.Empty).FirstOrDefault();
         Container.Bind<LevelManagementSettings>().FromInstance(levelManagementSettings);
+        
+        var levelImageRepository = Resources.LoadAll<GameLevelImageStubRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<ILevelItemImageRepository>().FromInstance(levelImageRepository);
+        
+        var levelsRepository = Resources.LoadAll<GameLevelsHardcodedRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IGameLevelsRepository>().FromInstance(levelsRepository);
 
         var levelLoadingAnimation = FindObjectOfType<CameraRotateLevelLoadingAnimation>();
         Container.BindInterfacesAndSelfTo<CameraRotateLevelLoadingAnimation>().FromInstance(levelLoadingAnimation).AsSingle();
