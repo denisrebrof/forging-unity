@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using GameLevels.Domain;
 using UnityEngine;
 
@@ -35,6 +36,11 @@ namespace GameLevels.Data
             var arrayId = levels.IndexOf(level);
             level.completed = true;
             levels[arrayId] = level;
+        }
+
+        public GameLevel GetCurrentLevel()
+        {
+            return levels.FirstOrDefault(level => !level.completed) ?? levels.Last();
         }
     }
 }

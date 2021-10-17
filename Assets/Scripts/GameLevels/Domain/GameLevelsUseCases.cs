@@ -16,7 +16,12 @@ namespace GameLevels.Domain
         public List<GameLevel> GetLevelsPaged(int page, int pageSize) =>
             _levelsRepository.GetLevelsPaged(page, pageSize);
 
-        public void CompleteLevel(int id)
+        public GameLevel GetCurrentLevel()
+        {
+            return _levelsRepository.GetCurrentLevel();
+        }
+
+        public void CompleteLevel(long id)
         {
             var level = _levelsRepository.GetLevel(id);
             if(!level.completed)
