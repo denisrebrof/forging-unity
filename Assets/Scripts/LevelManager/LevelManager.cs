@@ -30,10 +30,13 @@ namespace LevelManager
         [ContextMenu("CompleteLevel")]
         public void CompleteLevel()
         {
-            if(_levelsUseCases.smashingLevels.Length==0)
-                return;
-            _currentLevelID = Mathf.Clamp(_currentLevelID+1,0, _levelsUseCases.get);
-            PlayerPrefs.SetInt(currentLevelIDPref, _currentLevelID);
+            var nextLevel = _currentLevelID + 1;
+            if (_levelsUseCases.GetLevel(nextLevel) != null)
+            {
+                _currentLevelID = nextLevel;
+                PlayerPrefs.SetInt(currentLevelIDPref, _currentLevelID);
+            }
+
             GameEventMessage.SendEvent(LevelCompletedUIEvent, gameObject);
         }
 
