@@ -23,22 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/IShopItemsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/IShopItemsRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemStatus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemViewDefault.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemViewDefault.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Data/GameLevelsHardcodedRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Data/GameLevelsHardcodedRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevelsUseCases.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevelsUseCases.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/IShopItemsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/IShopItemsRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +63,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemViewDefault.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsRepository.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelItemViewDefault.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Data/GameLevelsHardcodedRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemStatus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/IShopItemsRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +121,7 @@
       <workItem from="1632070912800" duration="769000" />
       <workItem from="1632691541399" duration="3896000" />
       <workItem from="1632860948418" duration="5349000" />
-      <workItem from="1634500378859" duration="2674000" />
+      <workItem from="1634500378859" duration="6567000" />
     </task>
     <servers />
   </component>
@@ -142,6 +147,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1057" y="401" key="RiderGenerateDialog" timestamp="1634503675222">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1057" y="401" key="RiderGenerateDialog/0.0.2560.1400/-1920.471.1920.1040@0.0.2560.1400" timestamp="1634503675222" />
     <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1634501402463">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

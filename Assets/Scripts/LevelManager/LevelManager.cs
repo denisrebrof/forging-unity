@@ -24,7 +24,7 @@ namespace LevelManager
         public void CompleteLevel()
         {
             var currentLevel = _levelsUseCases.GetCurrentLevel();
-            _levelsUseCases.CompleteLevel(currentLevel.id);
+            _levelsUseCases.CompleteLevel(currentLevel.ID);
             GameEventMessage.SendEvent(LevelCompletedUIEvent, gameObject);
         }
 

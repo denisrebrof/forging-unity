@@ -24,8 +24,8 @@ namespace GameLevels.Domain
         public void CompleteLevel(long id)
         {
             var level = _levelsRepository.GetLevel(id);
-            if(!level.completed)
-                _balanceRepository.AddBalance(level.coinsReward);
+            if(!level.Completed)
+                _balanceRepository.AddBalance(level.CoinsReward);
             _levelsRepository.CompleteLevel(id);
         }
     }

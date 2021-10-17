@@ -2057,11 +2057,13 @@
           </e>
           <e p="Shop" t="Include">
             <e p="Data" t="Include">
-              <e p="ShopItem.cs" t="Include" />
               <e p="ShopItemsHardcodedRepository.cs" t="Include" />
             </e>
             <e p="Domain" t="Include">
               <e p="IShopItemsRepository.cs" t="Include" />
+              <e p="ShopItem.cs" t="Include" />
+              <e p="ShopItemStatus.cs" t="Include" />
+              <e p="ShopItemType.cs" t="Include" />
             </e>
           </e>
           <e p="Spawn" t="Include">

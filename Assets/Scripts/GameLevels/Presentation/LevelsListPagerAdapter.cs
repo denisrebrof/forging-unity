@@ -62,8 +62,8 @@ namespace GameLevels.Presentation
             foreach (var level in levels)
             {
                 var levelItem = GetLevelItem();
-                var sprite = imageRepository.GetSpriteForLevel(level.id);
-                levelItem.Bind(level.number, sprite, level.completed, viewHolder.RectTransform);
+                var sprite = imageRepository.GetSpriteForLevel(level.ID);
+                levelItem.Bind(level.Number, sprite, level.Completed, viewHolder.RectTransform);
             }
             viewHolder.RectTransform.sizeDelta = Vector2.zero;
             viewHolder.RectTransform.localScale = Vector3.one;

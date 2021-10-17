@@ -2,45 +2,46 @@ using System.Collections.Generic;
 using System.Linq;
 using GameLevels.Domain;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameLevels.Data
 {
     [CreateAssetMenu(fileName = "GameLevelsHardcodedRepository")]
     public class GameLevelsHardcodedRepository : ScriptableObject, IGameLevelsRepository
     {
-        [SerializeField] private List<GameLevel> levels;
+        [SerializeField] private List<GameLevel> GameLevels;
         
         public GameLevel GetLevel(long id)
         {
-            return levels.Find(level => level.id == id);
+            return GameLevels.Find(level => level.ID == id);
         }
 
         public List<GameLevel> GetLevelsPaged(int page, int pageSize)
         {
             var startIndex = page * pageSize;
-            if (startIndex >= levels.Count)
+            if (startIndex >= GameLevels.Count)
                 return new List<GameLevel>();
 
-            var size = Mathf.Min(levels.Count - startIndex, pageSize);
-            return levels.GetRange(startIndex, size);
+            var size = Mathf.Min(GameLevels.Count - startIndex, pageSize);
+            return GameLevels.GetRange(startIndex, size);
         }
 
         public int GetLevelsCount()
         {
-            return levels.Count;
+            return GameLevels.Count;
         }
 
         public void CompleteLevel(long id)
         {
             var level = GetLevel(id);
-            var arrayId = levels.IndexOf(level);
-            level.completed = true;
-            levels[arrayId] = level;
+            var arrayId = GameLevels.IndexOf(level);
+            level.Completed = true;
+            GameLevels[arrayId] = level;
         }
 
         public GameLevel GetCurrentLevel()
         {
-            return levels.FirstOrDefault(level => !level.completed) ?? levels.Last();
+            return GameLevels.FirstOrDefault(level => !level.Completed) ?? GameLevels.Last();
         }
     }
 }

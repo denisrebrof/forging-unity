@@ -44,8 +44,8 @@ namespace GameLevels.Presentation
         {
             while (levelHolder.childCount > 0)
                 DestroyImmediate(levelHolder.GetChild(0).gameObject);
-            Debug.Log(levelToLoad.levelObjectUri);
-            var levelObject = Resources.Load(levelToLoad.levelObjectUri) as GameObject;
+            Debug.Log(levelToLoad.LevelObjectUri);
+            var levelObject = Resources.Load(levelToLoad.LevelObjectUri) as GameObject;
             Instantiate(levelObject, levelHolder.position, levelHolder.rotation, levelHolder);
             levelToLoad = null;
         }
