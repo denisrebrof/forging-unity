@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace GameLevels.Presentation
 {
-    public class LevelItemView : LevelsListPagerAdapter.LevelItemView
+    public class LevelItemViewDefault : LevelsListPagerAdapter.LevelItemView
     {
         [SerializeField] private Text text;
         [SerializeField] private Image background;
