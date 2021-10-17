@@ -1,4 +1,5 @@
 ﻿using Doozy.Engine;
+using GameLevels.Domain;
 using LevelManagement;
 using UnityEngine;
 using Zenject;
@@ -8,11 +9,11 @@ namespace LevelManager
     public class LevelManager : MonoBehaviour
     {
         [Inject]
-        private GameLevels.Presentation.LevelLoader levelLoader;
+        private GameLevels.Presentation.LevelLoader _levelLoader;
         [Inject]
-        private LevelManagementSettings levelSettings;
+        private GameLevelsUseCases _levelsUseCases;
 
-        private int currentLevelID = 0;
+        private int _currentLevelID = 0;
 
         private static string currentLevelIDPref = "currentLevelIDPref";
 
@@ -22,25 +23,26 @@ namespace LevelManager
         private void Start()
         {
             if(PlayerPrefs.HasKey(currentLevelIDPref))
-                currentLevelID = PlayerPrefs.GetInt(currentLevelIDPref);
+                _currentLevelID = PlayerPrefs.GetInt(currentLevelIDPref);
             LoadCurrentLevel();
         }
 
         [ContextMenu("CompleteLevel")]
         public void CompleteLevel()
         {
-            if(levelSettings.smashingLevels.Length==0)
+            if(_levelsUseCases.smashingLevels.Length==0)
                 return;
-            currentLevelID = Mathf.Clamp(currentLevelID+1,0, levelSettings.smashingLevels.Length-1);
-            PlayerPrefs.SetInt(currentLevelIDPref, currentLevelID);
+            _currentLevelID = Mathf.Clamp(_currentLevelID+1,0, _levelsUseCases.get);
+            PlayerPrefs.SetInt(currentLevelIDPref, _currentLevelID);
             GameEventMessage.SendEvent(LevelCompletedUIEvent, gameObject);
         }
 
         [ContextMenu("LoadCurrentLevel")]
         public void LoadCurrentLevel()
         {
-            levelLoader.LoadLevel(levelSettings.smashingLevels[currentLevelID]);
-            Debug.Log("Loading level " + currentLevelID);
+            var currentLevel = _levelsUseCases.GetLevel(_currentLevelID);
+            _levelLoader.LoadLevel(currentLevel);
+            Debug.Log("Loading level " + _currentLevelID);
             GameEventMessage.SendEvent(LevelLoadedUIEvent, gameObject);
         }
 

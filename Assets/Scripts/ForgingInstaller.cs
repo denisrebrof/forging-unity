@@ -2,6 +2,8 @@
 using LevelManagement;
 using System;
 using System.Linq;
+using Balance.Data;
+using ForgingDomain;
 using GameLevels.Data;
 using GameLevels.Domain;
 using UnityEngine;
@@ -27,12 +29,18 @@ public class ForgingInstaller : MonoInstaller
         
         var levelsRepository = Resources.LoadAll<GameLevelsHardcodedRepository>(String.Empty).FirstOrDefault();
         Container.Bind<IGameLevelsRepository>().FromInstance(levelsRepository);
+        
+        var balanceRepository = Resources.LoadAll<PlayerPrefsBalanceRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IBalanceRepository>().FromInstance(balanceRepository);
 
         var levelLoadingAnimation = FindObjectOfType<CameraRotateLevelLoadingAnimation>();
         Container.BindInterfacesAndSelfTo<CameraRotateLevelLoadingAnimation>().FromInstance(levelLoadingAnimation).AsSingle();
 
         var levelLoader = FindObjectOfType<GameLevels.Presentation.LevelLoader>();
         Container.Bind<GameLevels.Presentation.LevelLoader>().FromInstance(levelLoader);
+        
+        var levelsUseCases = new GameLevelsUseCases();
+        Container.Bind<GameLevelsUseCases>().FromInstance(levelsUseCases);
 
         var hMapController = FindObjectOfType<HeatingMapController>();
         Container.Bind<HeatingMapController>().FromInstance(hMapController);

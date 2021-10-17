@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using ForgingDomain;
+using Zenject;
 
 namespace GameLevels.Domain
 {
     public class GameLevelsUseCases
     {
+        [Inject]
         private IGameLevelsRepository _levelsRepository;
+        [Inject]
         private IBalanceRepository _balanceRepository;
 
         public GameLevel GetLevel(int id) => _levelsRepository.GetLevel(id);
