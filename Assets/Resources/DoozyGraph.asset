@@ -1,5 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8975259146722412418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 70f05774-9a92-4c3e-ad62-4e407fdcde08
+      m_inputNodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+      m_inputSocketId: 1fefebaf-91d8-4452-908c-dee4938e4e9a
+      m_outputNodeId: 61c57edd-9411-403d-a39a-801893aa29c0
+      m_outputSocketId: 50082035-845e-409f-bf95-71dfa1583a1e
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 1fefebaf-91d8-4452-908c-dee4938e4e9a
+    m_nodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 439d15cf-285a-4f7a-817b-5c88ce47dae6
+      m_inputNodeId: 61c57edd-9411-403d-a39a-801893aa29c0
+      m_inputSocketId: 1429d92f-67a4-4a59-9871-c9d62eeec77a
+      m_outputNodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+      m_outputSocketId: 542b7b4a-5405-4e69-908f-636d3de1471c
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 542b7b4a-5405-4e69-908f-636d3de1471c
+    m_nodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+    m_socketName: OutputSocket_1
+    m_value: '{"ButtonCategory":"General","ButtonName":"WheelOfFortune_Close","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 128
+  m_width: 216
+  m_x: 192
+  m_y: 516
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 97d86245-7b4c-497e-b39e-9bbd0c6df063
+  m_id: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+  m_name: Wheel Of Fortune
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: General
+    InstantAction: 0
+    Name: WheelOfFortune
+  m_onEnterHideViews: []
+  m_onExitShowViews: []
+  m_onExitHideViews:
+  - Category: General
+    InstantAction: 0
+    Name: WheelOfFortune
 --- !u!114 &-8606917005954038338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -411,11 +507,11 @@ MonoBehaviour:
       m_outputSocketId: fe884f5c-352f-4740-bef3-84bc295eece7
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: fc45e4d8-6d1c-4339-8658-620941b1430d
+      m_id: 439d15cf-285a-4f7a-817b-5c88ce47dae6
       m_inputNodeId: 61c57edd-9411-403d-a39a-801893aa29c0
       m_inputSocketId: 1429d92f-67a4-4a59-9871-c9d62eeec77a
-      m_outputNodeId: 83cb67e8-eea9-428f-96d3-e955cbd058d1
-      m_outputSocketId: e1ebce27-ce25-46a4-862f-e5709fdd5f8d
+      m_outputNodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+      m_outputSocketId: 542b7b4a-5405-4e69-908f-636d3de1471c
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -516,9 +612,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: e4254f43-6e1d-4331-8a23-0ec3423f90f1
-      m_inputNodeId: 83cb67e8-eea9-428f-96d3-e955cbd058d1
-      m_inputSocketId: 3a38434a-3856-4011-be7b-7ed3435fe647
+      m_id: 70f05774-9a92-4c3e-ad62-4e407fdcde08
+      m_inputNodeId: e1fcd377-69be-4dcf-b7f1-98c24b7d8f76
+      m_inputSocketId: 1fefebaf-91d8-4452-908c-dee4938e4e9a
       m_outputNodeId: 61c57edd-9411-403d-a39a-801893aa29c0
       m_outputSocketId: 50082035-845e-409f-bf95-71dfa1583a1e
     m_connectionPoints:
@@ -589,13 +685,12 @@ MonoBehaviour:
   - {fileID: -3931720298745029945}
   - {fileID: -8606917005954038338}
   - {fileID: 5631280596165078000}
-  - {fileID: 6212593739189363229}
+  - {fileID: -8975259146722412418}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: 97d86245-7b4c-497e-b39e-9bbd0c6df063
-  m_lastModified: 132766465668144477
-  m_lastModified: 132783676449720333
+  m_lastModified: 132789735615892639
 --- !u!114 &1953171496420951484
 MonoBehaviour:
   m_ObjectHideFlags: 1
