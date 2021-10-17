@@ -1,42 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPageViewHolder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPageViewHolder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPagerAdapter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPagerAdapter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/IPageViewHolder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/IPageViewHolder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Internal/ProcessorsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Internal/ProcessorsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Internal/ProcessorsSettings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DebugFP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/DebugFP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DebugThrowable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/DebugThrowable.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/HeatedCooper/HeatedCooper.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/HeatedCooper/HeatedCooper.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lava/DepthSh 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Lava/DepthSh 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/SparksParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/SparksParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/isVisible.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/isVisible.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hammer/CorruptedHammerLit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hammer/CorruptedHammerLit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/CarWheelDeformation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/CarWheelDeformation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Ball.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Ball.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Ball.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Ball.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Cyan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Cyan.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Dark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/LightGreen 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/LightGreen 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Pink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Pink.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/Purple.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/TestTex.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Materials/TestTex.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Prefabs/CarTerrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Prefabs/CarTerrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Prefabs/Throwable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/Prefabs/Throwable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/ProjectileImpacts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PsoftBody/ExampleScenes/ProjectileImpacts.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/!Core/Source/RainbowCore.src.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/RainbowFolders/Editor/Source/RainbowFolders.src.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelsListPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelsListPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pager/IPagerAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/IPagerAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pager/PagerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pager/PagerView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +27,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPageViewHolder.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1yMoc3LSCAviwQT1Y31MAUsHg6K" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34997028" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -62,17 +57,19 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5360">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5360" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -86,15 +83,49 @@
       <option name="presentableId" value="Default" />
       <updated>1632070896563</updated>
       <workItem from="1632070912800" duration="769000" />
+      <workItem from="1632691541399" duration="3896000" />
+      <workItem from="1632860948418" duration="5349000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Pager/PagerView.cs</url>
+          <line>28</line>
+          <properties documentPath="D:\Projects\Fork\forging-unity\Assets\Scripts\Pager\PagerView.cs" initialLine="28" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="950" />
+            </startOffsets>
+            <endOffsets>
+              <option value="998" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

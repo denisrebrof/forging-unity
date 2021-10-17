@@ -17,13 +17,13 @@ namespace LevelLoading
             defaultRotation = cameraTransform.rotation.eulerAngles.y;
         }
 
-        public void StartAnimation(Action onSceneHided = null, Action onCompleted = null)
+        public void StartAnimation(Action onSceneHidden = null, Action onCompleted = null)
         {
             StopAllCoroutines();
-            StartCoroutine(LevelLoadAnimation(onSceneHided, onCompleted));
+            StartCoroutine(LevelLoadAnimation(onSceneHidden, onCompleted));
         }
 
-        private IEnumerator LevelLoadAnimation(Action onSceneHided = null, Action onCompleted = null)
+        private IEnumerator LevelLoadAnimation(Action onSceneHidden = null, Action onCompleted = null)
         {
             float halfRotateDuration = rotateDuration/2f;
             float timer = halfRotateDuration;
@@ -35,7 +35,9 @@ namespace LevelLoading
                 camRotation.y = Mathf.Lerp(defaultRotation, defaultRotation+180f, 1f-(timer/halfRotateDuration));
                 cameraTransform.rotation = Quaternion.Euler(camRotation);
             }
-            onSceneHided.Invoke();
+
+            if (onSceneHidden != null) 
+                onSceneHidden.Invoke();
             timer = halfRotateDuration;
             while(timer>0)
             {
@@ -46,7 +48,8 @@ namespace LevelLoading
             }
             camRotation.y = defaultRotation;
             cameraTransform.rotation = Quaternion.Euler(camRotation);
-            onCompleted.Invoke();
+            if (onCompleted != null) 
+                onCompleted.Invoke();
         }
     }
 }

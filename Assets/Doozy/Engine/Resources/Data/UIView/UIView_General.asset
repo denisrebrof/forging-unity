@@ -19,6 +19,6 @@ MonoBehaviour:
   - GameLevel
   - LevelCompleted
   - MysteryObject
-  - MysteryObjectsList
   - Settings
   - WheelOfFortune
+  - LevelsList

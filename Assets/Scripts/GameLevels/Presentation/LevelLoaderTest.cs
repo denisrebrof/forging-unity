@@ -1,11 +1,12 @@
-﻿using LevelLoading;
+﻿using GameLevels.Domain;
+using LevelLoading;
 using UnityEngine;
 using Zenject;
 
 public class LevelLoaderTest : MonoBehaviour
 {
     [SerializeField,Inject]
-    private LevelLoader levelLoader;
+    private GameLevels.Presentation.LevelLoader levelLoader;
     [SerializeField]
     private GameLevel level;
 

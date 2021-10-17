@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GameLevels.Domain;
+using UnityEngine;
 
 namespace LevelManagement
 {

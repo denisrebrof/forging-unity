@@ -2,6 +2,10 @@
 using LevelManagement;
 using System;
 using System.Linq;
+using Balance.Data;
+using ForgingDomain;
+using GameLevels.Data;
+using GameLevels.Domain;
 using UnityEngine;
 using Zenject;
 
@@ -14,17 +18,29 @@ public class ForgingInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        var levelManager = FindObjectOfType<LevelManager>();
-        Container.BindInterfacesAndSelfTo<LevelManager>().FromInstance(levelManager);
+        var levelManager = FindObjectOfType<LevelManager.LevelManager>();
+        Container.BindInterfacesAndSelfTo<LevelManager.LevelManager>().FromInstance(levelManager);
 
         var levelManagementSettings = Resources.LoadAll<LevelManagementSettings>(String.Empty).FirstOrDefault();
         Container.Bind<LevelManagementSettings>().FromInstance(levelManagementSettings);
+        
+        var levelImageRepository = Resources.LoadAll<GameLevelImageStubRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<ILevelItemImageRepository>().FromInstance(levelImageRepository);
+        
+        var levelsRepository = Resources.LoadAll<GameLevelsHardcodedRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IGameLevelsRepository>().FromInstance(levelsRepository);
+        
+        var balanceRepository = Resources.LoadAll<PlayerPrefsBalanceRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IBalanceRepository>().FromInstance(balanceRepository);
 
         var levelLoadingAnimation = FindObjectOfType<CameraRotateLevelLoadingAnimation>();
         Container.BindInterfacesAndSelfTo<CameraRotateLevelLoadingAnimation>().FromInstance(levelLoadingAnimation).AsSingle();
 
-        var levelLoader = FindObjectOfType<LevelLoader>();
-        Container.Bind<LevelLoader>().FromInstance(levelLoader);
+        var levelLoader = FindObjectOfType<GameLevels.Presentation.LevelLoader>();
+        Container.Bind<GameLevels.Presentation.LevelLoader>().FromInstance(levelLoader);
+        
+        var levelsUseCases = new GameLevelsUseCases();
+        Container.Bind<GameLevelsUseCases>().FromInstance(levelsUseCases);
 
         var hMapController = FindObjectOfType<HeatingMapController>();
         Container.Bind<HeatingMapController>().FromInstance(hMapController);

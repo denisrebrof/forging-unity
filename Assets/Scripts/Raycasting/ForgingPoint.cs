@@ -13,7 +13,7 @@ public class ForgingPoint : MonoBehaviour
     [SerializeField]
     private Animator animator;
     [Inject]
-    private Camera camera;
+    private new Camera camera;
 
     private Settings settings;
 

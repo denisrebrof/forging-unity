@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb327e7d5364f6d45a9c8b3ca44105b8, type: 3}
+  m_Name: GameLevelsHardcodedRepository
+  m_EditorClassIdentifier: 
+  levels:
+  - id: 0
+    number: 0
+    coinsReward: 10
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 1
+    number: 1
+    coinsReward: 11
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 2
+    number: 2
+    coinsReward: 22
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 3
+    number: 3
+    coinsReward: 33
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 4
+    number: 4
+    coinsReward: 44
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 5
+    number: 5
+    coinsReward: 55
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 6
+    number: 6
+    coinsReward: 66
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 7
+    number: 7
+    coinsReward: 77
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 8
+    number: 8
+    coinsReward: 88
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 9
+    number: 9
+    coinsReward: 99
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
+  - id: 10
+    number: 10
+    coinsReward: 100
+    completed: 0
+    imageUri: 
+    levelObjectUri: Level 1
