@@ -8,5 +8,6 @@ namespace GameLevels.Domain
         List<GameLevel> GetLevelsPaged(int page, int pageSize);
         int GetLevelsCount();
         void CompleteLevel(long id);
+        GameLevel GetCurrentLevel();
     }
 }
