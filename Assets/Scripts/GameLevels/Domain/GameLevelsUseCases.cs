@@ -18,7 +18,7 @@ namespace GameLevels.Domain
 
         public GameLevel GetCurrentLevel() => _levelsRepository.GetCurrentLevel();
 
-        public int GetLevelsCount() => -_levelsRepository.GetLevelsCount();
+        public int GetLevelsCount() => _levelsRepository.GetLevelsCount();
 
         public void CompleteLevel(long id)
         {
