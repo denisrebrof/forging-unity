@@ -1,6 +1,8 @@
-﻿using Doozy.Engine;
+﻿using System;
+using Doozy.Engine;
 using GameLevels.Domain;
 using GameLevels.Presentation;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -14,6 +16,8 @@ namespace LevelManager
         public string LevelCompletedUIEvent = "LevelCompleted";
         public string LevelLoadedUIEvent = "OpenLevel";
 
+        private readonly Subject<GameLevel> _selectedLevel = new Subject<GameLevel>(); 
+
         private void Start() => LoadCurrentLevel();
 
         [ContextMenu("CompleteLevel")]
@@ -23,6 +27,8 @@ namespace LevelManager
             _levelsUseCases.CompleteLevel(currentLevel.id);
             GameEventMessage.SendEvent(LevelCompletedUIEvent, gameObject);
         }
+
+        public IObservable<GameLevel> GetLoadedLevel() => _selectedLevel;
 
         [ContextMenu("LoadCurrentLevel")]
         public void LoadCurrentLevel()
@@ -41,6 +47,7 @@ namespace LevelManager
         {
             _levelLoader.LoadLevel(level);
             GameEventMessage.SendEvent(LevelLoadedUIEvent, gameObject);
+            _selectedLevel.OnNext(level);
         }
     }
 }
