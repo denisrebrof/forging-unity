@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ForgingDomain;
 using Zenject;
 
@@ -10,7 +11,7 @@ namespace GameLevels.Domain
         private IGameLevelsRepository _levelsRepository;
         [Inject]
         private IBalanceRepository _balanceRepository;
-
+        
         public GameLevel GetLevel(int id) => _levelsRepository.GetLevel(id);
 
         public List<GameLevel> GetLevelsPaged(int page, int pageSize) =>

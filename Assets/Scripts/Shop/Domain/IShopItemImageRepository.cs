@@ -1,4 +1,9 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using UnityEngine;
+
+namespace Shop.Domain
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IShopItemImageRepository
+    {
+        Sprite GetShopItemImage(long itemID);
+    }
 }

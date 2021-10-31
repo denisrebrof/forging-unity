@@ -27,3 +27,5 @@ MonoBehaviour:
   - WheelOfFortune_Open
   - WheelOfFortune_Close
   - WheelOfFortune_Play
+  - Shop_Open
+  - Shop_Close
