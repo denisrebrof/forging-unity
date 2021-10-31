@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Balance/Data/PlayerPrefsBalanceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Balance/Data/PlayerPrefsBalanceRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +30,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pager/DefaultPageViewHolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/GameLevelCaptionView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/GameLevelCaptionView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/EditorPrefBoolFlags.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yMoc3LSCAviwQT1Y31MAUsHg6K" />
@@ -54,10 +59,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13764">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13764" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -116,6 +121,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevelsUseCases.cs</url>
+          <line>26</line>
+          <properties documentPath="D:\Projects\Fork\forging-unity\Assets\Scripts\GameLevels\Domain\GameLevelsUseCases.cs" initialLine="26" containingFunctionPresentation="method 'CompleteLevel'">
+            <startOffsets>
+              <option value="823" />
+            </startOffsets>
+            <endOffsets>
+              <option value="872" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

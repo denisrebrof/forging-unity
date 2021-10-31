@@ -17236,9 +17236,20 @@ MonoBehaviour:
         CustomSortingLayer: Default
       Event:
         m_PersistentCalls:
-          m_Calls: []
-      GameEvents:
-      - LevelCompleted
+          m_Calls:
+          - m_Target: {fileID: 871357863}
+            m_TargetAssemblyTypeName: LevelManager.LevelManager, Assembly-CSharp
+            m_MethodName: CompleteLevel
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      GameEvents: []
       SoundData:
         SoundSource: 0
         DatabaseName: General
@@ -22576,6 +22587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe393e300a410334a8c2214a34507ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCompletedEventListener: {fileID: 0}
   LevelCompletedUIEvent: LevelCompleted
   LevelLoadedUIEvent: OpenLevel
 --- !u!1 &912468469
@@ -23691,7 +23703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close
+  m_Text: Compl
 --- !u!222 &1118408642
 CanvasRenderer:
   m_ObjectHideFlags: 0
