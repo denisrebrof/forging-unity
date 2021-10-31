@@ -2023,6 +2023,7 @@
             <e p="Presentation" t="Include">
               <e p="AnimatorLevelLoaderAnimator.cs" t="Include" />
               <e p="CameraRotateLevelLoadingAnimation.cs" t="Include" />
+              <e p="GameLevelCaptionView.cs" t="Include" />
               <e p="ILevelLoadingAnimator.cs" t="Include" />
               <e p="LevelItemViewDefault.cs" t="Include" />
               <e p="LevelLoader.cs" t="Include" />

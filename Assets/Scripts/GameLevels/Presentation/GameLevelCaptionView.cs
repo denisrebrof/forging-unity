@@ -23,7 +23,7 @@ namespace GameLevels.Presentation
 
         private void UpdateCaptionText(GameLevel level)
         {
-            caption.text = prefix + level.number;
+            caption.text = prefix + level.Number;
         }
 
         private void OnDestroy()
