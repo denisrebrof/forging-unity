@@ -9,7 +9,7 @@ namespace Balance.Domain
     {
         [Inject] private IBalanceRepository _repository;
 
-        private readonly Subject<int> _balanceSubject = new Subject<int>();
+        private readonly ReactiveProperty<int> _balanceSubject = new ReactiveProperty<int>();
 
         public IObservable<int> GetBalanceFlow()
         {
@@ -25,7 +25,7 @@ namespace Balance.Domain
 
         private void UpdateBalanceFlow()
         {
-            _balanceSubject.OnNext(_repository.GetBalance());
+            _balanceSubject.Value = _repository.GetBalance();
         }
     }
 }
