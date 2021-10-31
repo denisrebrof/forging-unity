@@ -12,70 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb327e7d5364f6d45a9c8b3ca44105b8, type: 3}
   m_Name: GameLevelsHardcodedRepository
   m_EditorClassIdentifier: 
-  levels:
-  - id: 0
-    number: 0
-    coinsReward: 10
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 1
-    number: 1
-    coinsReward: 11
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 2
-    number: 2
-    coinsReward: 22
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 3
-    number: 3
-    coinsReward: 33
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 4
-    number: 4
-    coinsReward: 44
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 5
-    number: 5
-    coinsReward: 55
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 6
-    number: 6
-    coinsReward: 66
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 7
-    number: 7
-    coinsReward: 77
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 8
-    number: 8
-    coinsReward: 88
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 9
-    number: 9
-    coinsReward: 99
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
-  - id: 10
-    number: 10
-    coinsReward: 100
-    completed: 0
-    imageUri: 
-    levelObjectUri: Level 1
+  GameLevels:
+  - ID: 0
+    Number: 0
+    CoinsReward: 10
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 0
+  - ID: 1
+    Number: 1
+    CoinsReward: 11
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 1
+  - ID: 2
+    Number: 2
+    CoinsReward: 22
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 2
+  - ID: 3
+    Number: 3
+    CoinsReward: 33
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 3
+  - ID: 4
+    Number: 4
+    CoinsReward: 44
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 4
+  - ID: 5
+    Number: 5
+    CoinsReward: 55
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 5
+  - ID: 6
+    Number: 6
+    CoinsReward: 66
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 6
+  - ID: 7
+    Number: 7
+    CoinsReward: 77
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 7
+  - ID: 8
+    Number: 8
+    CoinsReward: 88
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 8
+  - ID: 9
+    Number: 9
+    CoinsReward: 99
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 9
+  - ID: 10
+    Number: 10
+    CoinsReward: 100
+    Completed: 0
+    ImageUri: 
+    LevelObjectUri: Level 10
