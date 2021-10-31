@@ -1990,7 +1990,11 @@
               <e p="PlayerPrefsBalanceRepository.cs" t="Include" />
             </e>
             <e p="Domain" t="Include">
+              <e p="BalanceUseCases.cs" t="Include" />
               <e p="IBalanceRepository.cs" t="Include" />
+            </e>
+            <e p="Presentation" t="Include">
+              <e p="BalanceView.cs" t="Include" />
             </e>
           </e>
           <e p="CollisionEffect" t="Include">

@@ -8,6 +8,8 @@ using GameLevels.Domain;
 using GameLevels.Presentation;
 using LevelLoading;
 using LevelManagement;
+using Shop.Data;
+using Shop.Domain;
 using UnityEngine;
 using Zenject;
 

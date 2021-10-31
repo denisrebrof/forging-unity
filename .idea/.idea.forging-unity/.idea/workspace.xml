@@ -23,24 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/DefaultShopItemImageRepository.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/DefaultShopItemImageRepository.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ShopItemsHardcodedRepository.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ShopItemsHardcodedRepository.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/DefaultShopItemImageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/DefaultShopItemImageRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/DefaultShopItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/DefaultShopItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ShopItemsPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ShopItemsPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoozyGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoozyGraph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsUseCases.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsUseCases.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Presentation/ShopItemsPagerAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Presentation/ShopItemsPagerAdapter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
