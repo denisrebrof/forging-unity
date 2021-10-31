@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ForgingDomain;
 using Shop.Data;
 
 namespace Shop.Domain
@@ -11,5 +12,6 @@ namespace Shop.Domain
         ShopItemStatus TryToBuyShopItem(long id);
         List<ShopItem> GetCurrentSelectedShopItems();
         ShopItem GetSelectedShopItemByType(ShopItemType type);
+        void ResolveBalanceRepository(IBalanceRepository balanceRepository);
     }
 }

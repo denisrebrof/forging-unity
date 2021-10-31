@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ForgingDomain;
 using GameLevels.Domain;
 using Zenject;
 
@@ -9,6 +10,9 @@ namespace Shop.Domain
     {
         [Inject]
         private IShopItemsRepository shopItemsRepository;
+        
+        [Inject]
+        private IBalanceRepository balanceRepository;
         
         public event Action UpdateSelected;
         
@@ -23,9 +27,11 @@ namespace Shop.Domain
 
         public void TryToBuyShopItem(long id)
         {
-           var status = shopItemsRepository.TryToBuyShopItem(id);
+            shopItemsRepository.ResolveBalanceRepository(balanceRepository);
+            
+            var status = shopItemsRepository.TryToBuyShopItem(id);
 
-           if(status == ShopItemStatus.AlreadyBought)
+            if(status == ShopItemStatus.AlreadyBought)
                UpdateSelected?.Invoke();
         }
     }

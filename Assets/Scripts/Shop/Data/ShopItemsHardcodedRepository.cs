@@ -10,14 +10,12 @@ namespace Shop.Data
     [CreateAssetMenu(fileName = "ShopItemsHardcodedRepository")]
     public class ShopItemsHardcodedRepository : ScriptableObject, IShopItemsRepository
     {
+        private IBalanceRepository balanceRepository;
 
         [SerializeField] private List<ShopItem> ShopItems;
         
         private Dictionary<ShopItemType, ShopItem> selectedItems = new Dictionary<ShopItemType, ShopItem>();
 
-        [Inject]
-        private IBalanceRepository balanceRepository;
-        
         public ShopItem GetShopItem(long id)
         {
             return ShopItems.Find(item => item.ID == id);
@@ -36,6 +34,11 @@ namespace Shop.Data
         public int GetShopItemsCount()
         {
             return ShopItems.Count;
+        }
+
+        public void ResolveBalanceRepository(IBalanceRepository balanceRepository)
+        {
+            this.balanceRepository ??= balanceRepository;
         }
 
         public ShopItemStatus TryToBuyShopItem(long id)

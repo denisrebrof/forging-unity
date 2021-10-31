@@ -22,14 +22,6 @@ public class ForgingInstaller : MonoInstaller
     {
         var levelManager = FindObjectOfType<LevelManager.LevelManager>();
         Container.BindInterfacesAndSelfTo<LevelManager.LevelManager>().FromInstance(levelManager);
-
-        var shopItemsRepository = Resources.LoadAll<ShopItemsHardcodedRepository>(String.Empty).FirstOrDefault();
-        Container.Bind<IShopItemsRepository>().FromInstance(shopItemsRepository).AsSingle();
-
-        Container.Bind<ShopItemsUseCases>().AsSingle();
-
-        var shopItemImageRepository = Resources.LoadAll<DefaultShopItemImageRepository>(String.Empty).FirstOrDefault();
-        Container.Bind<IShopItemImageRepository>().FromInstance(shopItemImageRepository).AsSingle();
         
         var levelManagementSettings = Resources.LoadAll<LevelManagementSettings>(String.Empty).FirstOrDefault();
         Container.Bind<LevelManagementSettings>().FromInstance(levelManagementSettings);
@@ -71,5 +63,13 @@ public class ForgingInstaller : MonoInstaller
         Container.Bind<ForgingPointController>().FromInstance(fpController);
         Container.BindFactory<ForgingPoint.Settings, ForgingPoint, ForgingPoint.Factory>()
             .FromComponentInNewPrefab(forgingPointPrefab);
+        
+        var shopItemsRepository = Resources.LoadAll<ShopItemsHardcodedRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IShopItemsRepository>().FromInstance(shopItemsRepository).AsSingle();
+        
+        Container.Bind<ShopItemsUseCases>().AsSingle();
+
+        var shopItemImageRepository = Resources.LoadAll<DefaultShopItemImageRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IShopItemImageRepository>().FromInstance(shopItemImageRepository).AsSingle();
     }
 }

@@ -78,6 +78,14 @@ namespace Shop.Presentation
 
         private void UpdateSelectedItemsView()
         {
+            var children = selectedItemsTransform.GetComponentsInChildren<ShopItemView>();
+            
+            if (children.Length != 0)
+                foreach (var child in children)
+                {
+                    Destroy(child.gameObject);
+                }
+            
             boughtItems.Clear();
             
             var selectedShopItems = shopItemsUseCases.GetCurrentSelectedShopItems();
