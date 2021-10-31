@@ -18,7 +18,7 @@ MonoBehaviour:
     CoinsReward: 10
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 0
+    LevelObjectUri: Level 1
   - ID: 1
     Number: 1
     CoinsReward: 11
@@ -30,52 +30,52 @@ MonoBehaviour:
     CoinsReward: 22
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 2
+    LevelObjectUri: Level 1
   - ID: 3
     Number: 3
     CoinsReward: 33
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 3
+    LevelObjectUri: Level 1
   - ID: 4
     Number: 4
     CoinsReward: 44
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 4
+    LevelObjectUri: Level 1
   - ID: 5
     Number: 5
     CoinsReward: 55
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 5
+    LevelObjectUri: Level 1
   - ID: 6
     Number: 6
     CoinsReward: 66
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 6
+    LevelObjectUri: Level 1
   - ID: 7
     Number: 7
     CoinsReward: 77
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 7
+    LevelObjectUri: Level 1
   - ID: 8
     Number: 8
     CoinsReward: 88
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 8
+    LevelObjectUri: Level 1
   - ID: 9
     Number: 9
     CoinsReward: 99
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 9
+    LevelObjectUri: Level 1
   - ID: 10
     Number: 10
     CoinsReward: 100
     Completed: 0
     ImageUri: 
-    LevelObjectUri: Level 10
+    LevelObjectUri: Level 1
