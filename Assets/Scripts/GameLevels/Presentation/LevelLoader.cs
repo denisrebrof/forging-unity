@@ -8,9 +8,9 @@ namespace GameLevels.Presentation
     public class LevelLoader : MonoBehaviour
     {
         [SerializeField] private Transform levelHolder;
-        [Inject] private ILevelLoadingTransition levelSwitchAnimator;
-        private GameLevel levelToLoad = null;
-        private bool isLevelSwitching = false;
+        [Inject] private ILevelLoadingTransition _levelSwitchAnimator;
+        private GameLevel _levelToLoad;
+        private bool _isLevelSwitching;
 
         private void Start()
         {
@@ -22,12 +22,12 @@ namespace GameLevels.Presentation
 
         public void LoadLevel(GameLevel level)
         {
-            levelToLoad = level;
-            if (isLevelSwitching)
+            _levelToLoad = level;
+            if (_isLevelSwitching)
                 return;
 
-            isLevelSwitching = true;
-            levelSwitchAnimator.StartAnimation(
+            _isLevelSwitching = true;
+            _levelSwitchAnimator.StartAnimation(
                 SpawnLevel,
                 TryLoadLevel
             );
@@ -35,19 +35,19 @@ namespace GameLevels.Presentation
 
         private void TryLoadLevel()
         {
-            isLevelSwitching = false;
-            if (levelToLoad != null)
-                LoadLevel(levelToLoad);
+            _isLevelSwitching = false;
+            if (_levelToLoad != null)
+                LoadLevel(_levelToLoad);
         }
 
         private void SpawnLevel()
         {
             while (levelHolder.childCount > 0)
                 DestroyImmediate(levelHolder.GetChild(0).gameObject);
-            Debug.Log(levelToLoad.levelObjectUri);
-            var levelObject = Resources.Load(levelToLoad.levelObjectUri) as GameObject;
+            Debug.Log(_levelToLoad.levelObjectUri);
+            var levelObject = Resources.Load(_levelToLoad.levelObjectUri) as GameObject;
             Instantiate(levelObject, levelHolder.position, levelHolder.rotation, levelHolder);
-            levelToLoad = null;
+            _levelToLoad = null;
         }
     }
 }
