@@ -63,7 +63,7 @@ namespace GameLevels.Presentation
             {
                 var levelItem = GetLevelItem();
                 var sprite = imageRepository.GetSpriteForLevel(level.id);
-                levelItem.Bind(level.number, sprite, level.completed, viewHolder.RectTransform);
+                levelItem.Bind(level.number, sprite, level.completed, viewHolder.RectTransform, level.id);
             }
             viewHolder.RectTransform.sizeDelta = Vector2.zero;
             viewHolder.RectTransform.localScale = Vector3.one;
@@ -81,7 +81,7 @@ namespace GameLevels.Presentation
         public abstract class LevelItemView : MonoBehaviour
         {
             public abstract void SetActive(bool active);
-            public abstract void Bind(int levelNumber, Sprite preview, bool completedState, Transform parent);
+            public abstract void Bind(int levelNumber, Sprite preview, bool completedState, Transform parent, long levelId);
         }
     }
 }

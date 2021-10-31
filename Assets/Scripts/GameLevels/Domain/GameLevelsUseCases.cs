@@ -11,7 +11,7 @@ namespace GameLevels.Domain
         [Inject]
         private IBalanceRepository _balanceRepository;
 
-        public GameLevel GetLevel(int id) => _levelsRepository.GetLevel(id);
+        public GameLevel GetLevel(long id) => _levelsRepository.GetLevel(id);
 
         public List<GameLevel> GetLevelsPaged(int page, int pageSize) =>
             _levelsRepository.GetLevelsPaged(page, pageSize);

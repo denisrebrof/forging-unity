@@ -1,5 +1,6 @@
 ﻿using Doozy.Engine;
 using GameLevels.Domain;
+using GameLevels.Presentation;
 using UnityEngine;
 using Zenject;
 
@@ -7,10 +8,8 @@ namespace LevelManager
 {
     public class LevelManager : MonoBehaviour
     {
-        [Inject]
-        private GameLevels.Presentation.LevelLoader _levelLoader;
-        [Inject]
-        private GameLevelsUseCases _levelsUseCases;
+        [Inject] private LevelLoader _levelLoader;
+        [Inject] private GameLevelsUseCases _levelsUseCases;
 
         public string LevelCompletedUIEvent = "LevelCompleted";
         public string LevelLoadedUIEvent = "OpenLevel";
@@ -32,7 +31,18 @@ namespace LevelManager
         public void LoadCurrentLevel()
         {
             var currentLevel = _levelsUseCases.GetCurrentLevel();
-            _levelLoader.LoadLevel(currentLevel);
+            LoadLevel(currentLevel);
+        }
+
+        public void LoadLevel(long levelId)
+        {
+            var level = _levelsUseCases.GetLevel(levelId);
+            LoadLevel(level);
+        }
+
+        private void LoadLevel(GameLevel level)
+        {
+            _levelLoader.LoadLevel(level);
             GameEventMessage.SendEvent(LevelLoadedUIEvent, gameObject);
         }
     }
