@@ -2058,6 +2058,7 @@
           </e>
           <e p="Shop" t="Include">
             <e p="Data" t="Include">
+              <e p="DefaultShopItemImageRepository.cs" t="Include" />
               <e p="ShopItemsHardcodedRepository.cs" t="Include" />
             </e>
             <e p="Domain" t="Include">

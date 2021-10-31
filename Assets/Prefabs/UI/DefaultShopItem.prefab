@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -168,8 +168,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6999185606999142506}
   - component: {fileID: 4485965819500953131}
-  - component: {fileID: 6370300974234388282}
   - component: {fileID: 8574661097182009243}
+  - component: {fileID: -6994917616355073676}
   m_Layer: 5
   m_Name: DefaultShopItem
   m_TagString: Untagged
@@ -207,7 +207,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3619841979895099462}
   m_CullTransparentMesh: 1
---- !u!114 &6370300974234388282
+--- !u!114 &8574661097182009243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3619841979895099462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8466fadae042e88cf08291e295f99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: {fileID: 5138404547296983424}
+  background: {fileID: -6994917616355073676}
+  type: {fileID: 6379792157448142105}
+  button: {fileID: 3018830567081921542}
+--- !u!114 &-6994917616355073676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,7 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -237,22 +253,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8574661097182009243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3619841979895099462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f8466fadae042e88cf08291e295f99d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  price: {fileID: 5138404547296983424}
-  background: {fileID: 6370300974234388282}
-  type: {fileID: 6379792157448142105}
-  button: {fileID: 3018830567081921542}
 --- !u!1 &4526832875298864370
 GameObject:
   m_ObjectHideFlags: 0

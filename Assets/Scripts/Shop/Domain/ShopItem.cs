@@ -7,7 +7,6 @@ namespace Shop.Domain
     {
         public ShopItemType Type;
         public long ID;
-        public int Number;
         public int Price;
         public bool Bought;
         public string ImageUri;

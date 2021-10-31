@@ -6,6 +6,8 @@ using Balance.Data;
 using ForgingDomain;
 using GameLevels.Data;
 using GameLevels.Domain;
+using Shop.Data;
+using Shop.Domain;
 using UnityEngine;
 using Zenject;
 
@@ -21,6 +23,14 @@ public class ForgingInstaller : MonoInstaller
         var levelManager = FindObjectOfType<LevelManager.LevelManager>();
         Container.BindInterfacesAndSelfTo<LevelManager.LevelManager>().FromInstance(levelManager);
 
+        var shopItemsRepository = Resources.LoadAll<ShopItemsHardcodedRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IShopItemsRepository>().FromInstance(shopItemsRepository).AsSingle();
+
+        Container.Bind<ShopItemsUseCases>().AsSingle();
+
+        var shopItemImageRepository = Resources.LoadAll<DefaultShopItemImageRepository>(String.Empty).FirstOrDefault();
+        Container.Bind<IShopItemImageRepository>().FromInstance(shopItemImageRepository).AsSingle();
+        
         var levelManagementSettings = Resources.LoadAll<LevelManagementSettings>(String.Empty).FirstOrDefault();
         Container.Bind<LevelManagementSettings>().FromInstance(levelManagementSettings);
         

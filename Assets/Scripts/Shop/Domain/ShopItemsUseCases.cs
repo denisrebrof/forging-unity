@@ -21,14 +21,12 @@ namespace Shop.Domain
 
         public int GetShopItemsCount() => shopItemsRepository.GetShopItemsCount();
 
-        public ShopItemStatus TryToBuyShopItem(long id)
+        public void TryToBuyShopItem(long id)
         {
            var status = shopItemsRepository.TryToBuyShopItem(id);
 
            if(status == ShopItemStatus.AlreadyBought)
                UpdateSelected?.Invoke();
-           
-           return status;
         }
     }
 }

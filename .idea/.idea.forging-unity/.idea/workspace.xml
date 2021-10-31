@@ -22,7 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="" />
+    <list default="true" id="34a97f77-2aed-4028-94b5-22679c74881b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DefaultShopItemImageRepository.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DefaultShopItemImageRepository.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ShopItemsHardcodedRepository.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ShopItemsHardcodedRepository.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/DefaultShopItemImageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/DefaultShopItemImageRepository.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.forging-unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/DefaultShopItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/DefaultShopItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ShopItemsPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ShopItemsPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoozyGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoozyGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ForgingProto.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsUseCases.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsUseCases.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Presentation/ShopItemsPagerAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Presentation/ShopItemsPagerAdapter.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,14 +66,30 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/GameLevelCaptionView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevelsUseCases.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelsListPagerAdapter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/LevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLevels/Presentation/GameLevelCaptionView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Data/DefaultShopItemImageRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Domain/ShopItemsUseCases.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Presentation/ShopItemsPagerAdapter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ForgingInstaller.cs" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1yMoc3LSCAviwQT1Y31MAUsHg6K" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34997028" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.026002167" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -70,10 +105,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7372">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7372" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -92,6 +127,7 @@
       <workItem from="1632691541399" duration="3896000" />
       <workItem from="1632860948418" duration="5349000" />
       <workItem from="1635685186675" duration="3911000" />
+      <workItem from="1635692598076" duration="2909000" />
     </task>
     <servers />
   </component>
@@ -116,20 +152,91 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="519" key="GridCell.Tab.0.bottom" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1860" height="519" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.471.1920.1040@0.0.2560.1400" timestamp="1635694538899" />
+    <state width="1877" height="519" key="GridCell.Tab.0.center" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1860" height="519" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.471.1920.1040@0.0.2560.1400" timestamp="1635694538899" />
+    <state width="1877" height="519" key="GridCell.Tab.0.left" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1860" height="519" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.471.1920.1040@0.0.2560.1400" timestamp="1635694538899" />
+    <state width="1877" height="519" key="GridCell.Tab.0.right" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1860" height="519" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.471.1920.1040@0.0.2560.1400" timestamp="1635694538899" />
+    <state width="1877" height="519" key="GridCell.Tab.1.bottom" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.1.center" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.1.left" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.1.right" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.2.bottom" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.2.bottom/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.2.center" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.2.center/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.2.left" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.2.left/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.2.right" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.2.right/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.3.bottom" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.3.bottom/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.3.center" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.3.center/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.3.left" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.3.left/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+    <state width="1877" height="519" key="GridCell.Tab.3.right" timestamp="1635694813903">
+      <screen x="-1920" y="471" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="519" key="GridCell.Tab.3.right/0.0.2560.1400/-1920.471.1920.1040@-1920.471.1920.1040" timestamp="1635694813903" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Pager/PagerView.cs</url>
-          <line>28</line>
-          <properties documentPath="D:\Projects\Fork\forging-unity\Assets\Scripts\Pager\PagerView.cs" initialLine="28" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLevels/Domain/GameLevelsUseCases.cs</url>
-          <line>26</line>
-          <properties documentPath="D:\Projects\Fork\forging-unity\Assets\Scripts\GameLevels\Domain\GameLevelsUseCases.cs" initialLine="26" />
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Shop/Data/ShopItemsHardcodedRepository.cs</url>
+          <line>49</line>
+          <properties documentPath="D:\Unity Projects\forging-unity\Assets\Scripts\Shop\Data\ShopItemsHardcodedRepository.cs" initialLine="49">
+            <startOffsets>
+              <option value="1463" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1487" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

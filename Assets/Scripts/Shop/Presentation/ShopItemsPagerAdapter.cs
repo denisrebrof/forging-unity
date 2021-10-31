@@ -72,6 +72,7 @@ namespace Shop.Presentation
                 shopItemsPool.Enqueue(shopItem);
             }
 
+            shopItemsUseCases.UpdateSelected += UpdateSelectedItemsView;
             UpdateSelectedItemsView();
         }
 

@@ -58,7 +58,6 @@ namespace Shop.Data
 
             balanceRepository.AddBalance(-selectedItem.Price);
             selectedItem.Bought = true;
-            UpdateOrAddSelectedItem(selectedItem);
             return ShopItemStatus.Success;
         }
 
