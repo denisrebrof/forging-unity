@@ -14,10 +14,7 @@ namespace LevelManager
         public string LevelCompletedUIEvent = "LevelCompleted";
         public string LevelLoadedUIEvent = "OpenLevel";
 
-        private void Start()
-        {
-            LoadCurrentLevel();
-        }
+        private void Start() => LoadCurrentLevel();
 
         [ContextMenu("CompleteLevel")]
         public void CompleteLevel()

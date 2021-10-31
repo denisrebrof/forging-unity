@@ -8,11 +8,9 @@ namespace GameLevels.Presentation
 {
     public class LevelsListPagerAdapter : DefaultPagerAdapter<DefaultPageViewHolder>
     {
-        [Inject]
-        private IGameLevelsRepository levelsRepository;
-        
-        [Inject]
-        private ILevelItemImageRepository imageRepository;
+        [Inject] private GameLevelsUseCases levelsUseCases;
+
+        [Inject] private ILevelItemImageRepository imageRepository;
 
         [SerializeField] private LevelItemView levelPrefab;
 
@@ -34,7 +32,7 @@ namespace GameLevels.Presentation
             item.SetActive(false);
             levelItemsPool.Enqueue(item);
         }
-        
+
         private LevelItemView GetLevelItem()
         {
             var levelItem = levelItemsPool.Count > 0 ? levelItemsPool.Dequeue() : CreateLevelItem();
@@ -49,8 +47,8 @@ namespace GameLevels.Presentation
 
         public override int GetPagesCount()
         {
-            var pagesCount = levelsRepository.GetLevelsCount() / levelsOnPage;
-            if (levelsRepository.GetLevelsCount() % levelsOnPage != 0)
+            var pagesCount = levelsUseCases.GetLevelsCount() / levelsOnPage;
+            if (levelsUseCases.GetLevelsCount() % levelsOnPage != 0)
                 pagesCount += 1;
             return pagesCount;
         }
@@ -58,13 +56,14 @@ namespace GameLevels.Presentation
         protected override void Bind(DefaultPageViewHolder viewHolder, int pageNumber)
         {
             base.Bind(viewHolder, pageNumber);
-            var levels = levelsRepository.GetLevelsPaged(pageNumber, levelsOnPage);
+            var levels = levelsUseCases.GetLevelsPaged(pageNumber, levelsOnPage);
             foreach (var level in levels)
             {
                 var levelItem = GetLevelItem();
                 var sprite = imageRepository.GetSpriteForLevel(level.id);
                 levelItem.Bind(level.number, sprite, level.completed, viewHolder.RectTransform, level.id);
             }
+
             viewHolder.RectTransform.sizeDelta = Vector2.zero;
             viewHolder.RectTransform.localScale = Vector3.one;
         }
@@ -81,7 +80,9 @@ namespace GameLevels.Presentation
         public abstract class LevelItemView : MonoBehaviour
         {
             public abstract void SetActive(bool active);
-            public abstract void Bind(int levelNumber, Sprite preview, bool completedState, Transform parent, long levelId);
+
+            public abstract void Bind(int levelNumber, Sprite preview, bool completedState, Transform parent,
+                long levelId);
         }
     }
 }
