@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Balance.Data
 {
-    public class PlayerPrefsBalanceRepository : ScriptableObject, IBalanceRepository
+    public class PlayerPrefsBalanceRepository: IBalanceRepository
     {
 
         private const string BALANCE_PREF_KEY = "Balance";

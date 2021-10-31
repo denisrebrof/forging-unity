@@ -27,7 +27,7 @@ public class ForgingInstaller : MonoInstaller
         var levelImageRepository = Resources.LoadAll<GameLevelImageStubRepository>(String.Empty).FirstOrDefault();
         Container.Bind<ILevelItemImageRepository>().FromInstance(levelImageRepository);
         
-        var balanceRepository = Resources.LoadAll<PlayerPrefsBalanceRepository>(String.Empty).FirstOrDefault();
+        var balanceRepository = new PlayerPrefsBalanceRepository();
         Container.Bind<IBalanceRepository>().FromInstance(balanceRepository);
         
         var levelsRepository = Resources.LoadAll<GameLevelsHardcodedRepository>(String.Empty).FirstOrDefault();
