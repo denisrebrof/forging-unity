@@ -9,5 +9,6 @@ namespace GameLevels.Domain
         int GetLevelsCount();
         void CompleteLevel(long id);
         GameLevel GetCurrentLevel();
+        List<GameLevel> GetLevels();
     }
 }

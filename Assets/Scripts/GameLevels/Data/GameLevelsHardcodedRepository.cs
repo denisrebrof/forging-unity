@@ -43,5 +43,10 @@ namespace GameLevels.Data
         {
             return GameLevels.FirstOrDefault(level => !level.Completed) ?? GameLevels.Last();
         }
+
+        public List<GameLevel> GetLevels()
+        {
+            return GameLevels;
+        }
     }
 }

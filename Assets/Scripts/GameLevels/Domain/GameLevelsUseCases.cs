@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Balance.Domain;
 using ForgingDomain;
 using Zenject;
@@ -27,6 +28,11 @@ namespace GameLevels.Domain
             if(!level.Completed)
                 _balanceUseCases.AddBalance(level.CoinsReward);
             _levelsRepository.CompleteLevel(id);
+        }
+
+        public List<GameLevel> GetLevels()
+        {
+            return _levelsRepository.GetLevels();
         }
     }
 }

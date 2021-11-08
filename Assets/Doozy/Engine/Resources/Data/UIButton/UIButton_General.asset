@@ -29,3 +29,4 @@ MonoBehaviour:
   - WheelOfFortune_Play
   - Shop_Open
   - Shop_Close
+  - GoToNextLevel_Continue
